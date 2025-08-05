@@ -44,3 +44,10 @@ desktopNext.addEventListener("click", () => {
     currentDesktopIndex = (currentDesktopIndex + 1) % desktopImage.length;
     desktopImages.src = desktopImage[currentDesktopIndex];
 });
+
+const openMenu = document.querySelector(".room__hamburger-button");
+const closeMenu = document.querySelector(".room__close-button");
+const menu = document.querySelector(".nav__menu");
+const navLinks = document.querySelectorAll(".nav__link");
+const overlay = document.querySelector(".room__overlay");
+
