@@ -51,3 +51,22 @@ const menu = document.querySelector(".nav__menu");
 const navLinks = document.querySelectorAll(".nav__link");
 const overlay = document.querySelector(".room__overlay");
 
+openMenu.addEventListener("click", () => {
+    menu.classList.toggle("toggle");
+    overlay.classList.toggle("hidden");
+});
+
+closeMenu.addEventListener("click", () => {
+    menu.classList.remove("toggle");
+    overlay.classList.add("hidden");
+});
+
+navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.forEach(link => link.classList.remove("active"));
+        link.classList.add("active");
+        menu.classList.remove("toggle");
+        overlay.classList.add("hidden");
+    });
+});
+
