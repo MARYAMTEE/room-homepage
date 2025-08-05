@@ -19,23 +19,28 @@
 <body>
     <header class="room__header">
         <div class="room__logo-container">
-            <button class="room__hamburger-button" aria-label="Toggle Menu">
+            <button class="room__hamburger-button btn" aria-label="Toggle Menu">
                 <img src="./images/icon-hamburger.svg" alt="" aria-hidden="true" class="room__hamburger" />
             </button>
             <a href="index.html"><img src="./images/logo.svg" alt="Logo Image" class="room__logo" /></a>
         </div>
 
         <nav aria-label="Primary" class="nav__menu">
-             <button class="room__close-button" aria-label="Toggle Menu">
+             <button class="room__close-button btn" aria-label="Toggle Menu">
                 <img src="./images/icon-close.svg" alt="" aria-hidden="true" class="room__close-img" />
             </button>
-            <li class="nav__list"><a href="#" class="nav__link">home</a></li>
-            <li class="nav__list"><a href="#" class="nav__link">shop</a></li>
-            <li class="nav__list"><a href="#" class="nav__link">about</a></li>
-            <li class="nav__list"><a href="#" class="nav__link">contact</a></li>
+            
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#" class="nav__link">home</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">shop</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">about</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">contact</a></li>
+            </ul>
         </nav>
     </header>
+
     <div class="room__overlay hidden"></div>
+    
     <main>
         <section class="room__hero">
             <div class="room__hero-wrapper">

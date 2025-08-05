@@ -1,0 +1,35 @@
+.room__hero{
+    position: absolute;
+    top: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    z-index: -1;
+}
+
+.room__hero-wrapper{
+    position: relative;
+}
+
+.room__hero-desktop{
+    width: 100%;
+}
+
+.desktop__nav{
+    display: none;
+}
+
+.mobile__nav{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+//prev and Nex buttons
+.room__slider-button{
+    background-color: var(--black);
+    color: var(--white);
+    border: none;
+    width: 4rem;
+    height: 4rem;
+}
