@@ -1,3 +1,5 @@
+@use "../util/" as b;
+
 .room__header{
     position: relative;
     
@@ -7,6 +9,17 @@
         gap: 8rem;
         position: absolute;
         margin: 3rem 1.5rem 0;
+
+        .room__hamburger-button{
+            display: block;
+
+            @include b.breakpoint(medium){
+                .room__hamburger-button{
+                    display: none;
+                }
+            }
+
+        }
     }
 }
 

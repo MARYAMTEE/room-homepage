@@ -1,9 +1,15 @@
+@use "../util/" as b;
+
 .room__hero{
     position: absolute;
     top: 0;
     display: grid;
     grid-template-columns: 1fr;
     z-index: -1;
+
+    @include b.breakpoint(medium){
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 .room__hero-wrapper{
