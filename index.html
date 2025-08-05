@@ -5,12 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <!-- favicon -->
+     <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
     <!-- css -->
      <link rel="stylesheet" href="css/style.css">
     <!-- javaScript -->
      <script src="javascript/script.js" defer></script>
+    <!-- font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <header class="room__header">
+        <div class="room__logo-container">
+            <button class="room__hamburger-button" aria-label="Toggle Menu">
+                <img src="./images/icon-hamburger.svg" alt="" aria-hidden="true" class="room__hamburger" />
+            </button>
+            <img src="./images/logo.svg" alt="Logo Image" class="room__logo" />
+        </div>
+
+        <nav aria-label="Primary" class="nav__menu">
+            <li class="nav__list"><a href="#" class="nav__link">home</a></li>
+            <li class="nav__list"><a href="#" class="nav__link">shop</a></li>
+            <li class="nav__list"><a href="#" class="nav__link">about</a></li>
+            <li class="nav__list"><a href="#" class="nav__link">contact</a></li>
+        </nav>
+    </header>
+
+    <main>
+        <section class="room__hero">
+            <div class="room__hero-wrapper">
+                <picture>
+                    <source srcset="./images/mobile-image-hero-1.jpg" media="(max-width: 43.75rem)" />
+                    <img src="./images/desktop-image-hero-1.jpg" alt="Hero Image" class="room__hero-image" />
+                </picture>
+            
+
+                <!-- Mobile nav only -->
+                <div  class="room__slider-nav mobile__nav">
+                    <button aria-label="Previous Slide" class="room__slider-button room__slider-left">
+                        <img src="./images/icon-angle-left.svg" alt="" aria-hidden="true" class="room__slider-left" />
+                    </button>
+
+                    <button aria-label="Next Slide" class="room__slider-button room__slider-right">
+                        <img src="./images/icon-angle-right.svg" alt="" aria-hidden="true" class="room__slider-right" />
+                    </button>
+                </div>
+            </div>
+
+            <div class="room__hero-content">
+                <h1 class="room__hero-title">Discover innovative ways to decorate</h1>
+                <p class="room__hero-description">
+                    We provide unmatched quality, comfort, and style for property owners across the country. 
+                    Our experts combine form and function in bringing your vision to life. Create a room in your 
+                    own style with our collection and make your property a reflection of you and what you love.
+                </p>
+                <button class="room__hero-button">Shop Now</button>
+
+                <div class="room__slider desktop__nav">
+                    <button aria-label="Previous Slide" class="room__slider-button room__slider-left">
+                        <img src="./images/icon-angle-left.svg" alt="" aria-hidden="true" class="room__slider-left" />
+                    </button>
+
+                    <button aria-label="Next Slide" class="room__slider-button room__slider-right">
+                        <img src="./images/icon-angle-right.svg" alt="" aria-hidden="true" class="room__slider-right" />
+                    </button>
+                </div>
+            </div>
+        </section>    
+    </main>
 </body>
 </html>
