@@ -13,26 +13,6 @@
 }
 
 body{
-    font-family: 'League Spartan', sans-serif;
-}
-
-.hidden{
-    display: none
-}
-
-.room__overlay{
-    position: absolute;
-    top: 2rem;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.387);
-    z-index: 5;
-}
-
-.btn{
-    border: none;
-    outline: none;
-    background-color: transparent;
-    cursor: pointer;
-
+    color: var(--black);
+    font-family: "League Spartan", sans-serif;
 }

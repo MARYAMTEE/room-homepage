@@ -1,41 +1,19 @@
 @use "../util/" as b;
 
 .room__hero{
-    position: absolute;
-    top: 0;
     display: grid;
     grid-template-columns: 1fr;
-    z-index: -1;
 
-    @include b.breakpoint(medium){
+    @include b.breakpoint("medium") {
         grid-template-columns: 1fr 1fr;
+    }
+
+    @include b.breakpoint("large") {
+        grid-template-columns: 1.5fr 1fr;
     }
 }
 
-.room__hero-wrapper{
-    position: relative;
-}
-
 .room__hero-desktop{
+    object-fit: cover;
     width: 100%;
-}
-
-.desktop__nav{
-    display: none;
-}
-
-.mobile__nav{
-    display: flex;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
-
-//prev and Nex buttons
-.room__slider-button{
-    background-color: var(--black);
-    color: var(--white);
-    border: none;
-    width: 4rem;
-    height: 4rem;
 }
