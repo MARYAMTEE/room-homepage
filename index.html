@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Room homepage</title>
 
     <!-- favicon -->
      <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
@@ -12,7 +12,7 @@
     <!-- javaScript -->
      <script src="javascript/script.js" defer></script>
     <!-- font -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
 </head>
@@ -52,12 +52,12 @@
             
 
                 <!-- Mobile nav only -->
-                <div  class="room__slider-nav mobile__nav">
-                    <button aria-label="Previous Slide" class="room__slider-button room__slider-button--left">
+                <div  class="room__slider mobile__nav">
+                    <button aria-label="Previous Slide" class="room__slider-button room__slider-button--left grid">
                         <img src="./images/icon-angle-left.svg" alt="" aria-hidden="true" class="room__slider-left" />
                     </button>
 
-                    <button aria-label="Next Slide" class="room__slider-button room__slider-button--right">
+                    <button aria-label="Next Slide" class="room__slider-button room__slider-button--right grid">
                         <img src="./images/icon-angle-right.svg" alt="" aria-hidden="true" class="room__slider-right" />
                     </button>
                 </div>
@@ -70,20 +70,41 @@
                     Our experts combine form and function in bringing your vision to life. Create a room in your 
                     own style with our collection and make your property a reflection of you and what you love.
                 </p>
-                <button class="room__hero-button">Shop Now</button>
+                <div class="hero__content-btn flex">
+                    <p class="hero__content-paragraph">SHOP NOW</p>
+                    <a class="hero__content-tag" href="#"><img src="./images/icon-arrow.svg" alt=""></a>
+                </div>
 
                 <!-- Desktop nav  only-->
                 <div class="room__slider desktop__nav">
-                    <button aria-label="Previous Slide" class="room__slider-button room__slider-button--left">
+                    <button aria-label="Previous Slide" class="room__slider-button room__slider-button--left grid">
                         <img src="./images/icon-angle-left.svg" alt="" aria-hidden="true" class="room__slider-left" />
                     </button>
 
-                    <button aria-label="Next Slide" class="room__slider-button room__slider-button--right">
+                    <button aria-label="Next Slide" class="room__slider-button room__slider-button--right grid">
                         <img src="./images/icon-angle-right.svg" alt="" aria-hidden="true" class="room__slider-right" />
                     </button>
                 </div>
             </div>
-        </section>    
+        </section>  
+        
+        <section class="room__grid">
+            <div class="grid__item">
+                <img src="./images/image-about-dark.jpg" class="grid__img" alt="Dark Image of furniture">
+            </div>
+
+            <div class="grid__content">
+                <h2 class="grid__title">About our furniture</h2>
+                <p class="grid__paragraph">Our multifunctional collection blends design and function to suit your individual taste.
+                Make each room unique, or pick a cohesive theme that best express your interests and what
+                inspires you. Find the furniture pieces you need, from traditional to contemporary styles
+                or anything in between. Product specialists are available to help you create your dream space.</p>
+            </div>
+
+            <div class="grid__item">
+                <img src="./images/image-about-light.jpg" class="grid__img" alt="Light Image of furniture">
+            </div>
+        </section>
     </main>
 </body>
 </html>

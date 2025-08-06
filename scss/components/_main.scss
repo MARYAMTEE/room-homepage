@@ -11,11 +11,34 @@
     @include b.breakpoint("large") {
         grid-template-columns: 1.5fr 1fr;
     }
+
+    .room__slider{
+        position: absolute;
+        bottom: 0;
+    }
+
+    .room__slider-button{
+        background-color: var(--black);
+        outline: none;
+        border: none;
+        width: 3rem;
+        height: 3rem;
+
+    }
 }
 
 .room__hero-wrapper{
     position: relative;
-    overflow: hidden;
+    height: 100%;
+
+    .mobile__nav{
+        display: flex;
+        right: 0;
+
+        @include b.breakpoint("medium"){
+            display: none;
+        }
+    }
 }
 
 .room__hero-desktop{
@@ -23,46 +46,72 @@
     width: 100%;
 }
 
-.room__slider-nav,
-.room__slider{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
-
-.room__slider{
-    left: 0;
-}
-
-// slider navigation
-.room__slider-button{
-    background-color: var(--black);
-    border: none;
-    outline: none;
-    width: 3rem;
-    height: 3rem;
-    gap: 0;
-}
-
-// mobile hero navigation
-.mobile__nav{
-    display: flex;
-
-    @include b.breakpoint("medium") {
-        display: none;
-    }
-}
-
-// desktop hero navigation
-.desktop__nav{
-    display: none;
-
-    @include b.breakpoint("medium") {
-        display: flex;
-    }
-}
-
+// Hero content section
 .room__hero-content{
     position: relative;
-    overflow: hidden;
+    padding: 4rem 1.8rem;
+
+    .desktop__nav{
+        display: none;
+
+        @include b.breakpoint("medium"){
+            display: flex;
+            left: 0;
+        }
+
+        .room__slider-button{
+            width: 4rem;
+            height: 4rem;
+        }
+    }
+    
+    .room__hero-title{
+        font-size: 2.2rem;
+        font-weight: 700;
+    }
+
+    .room__hero-description{
+        font-size: 1rem;
+        padding-block: 1rem;
+        line-height: 1.4;
+        color: var(--grey-500);
+    }
+
+    .hero__content-btn{
+        gap: 2rem;
+        margin-block-start: 1.5rem;
+
+        .hero__content-paragraph{
+            font-weight: 500;
+            letter-spacing: 0.8rem;
+        }
+    }
+
+}
+
+// Grid section
+.room__grid{
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @include b.breakpoint("medium"){
+        grid-template-columns: 1fr 1.3fr 1fr;
+    }
+
+    .grid__title{
+        text-transform: uppercase;
+        font-size: 1rem;
+        letter-spacing: 0.3rem;
+    }
+
+    .grid__paragraph{
+        font-size: 1rem;
+        padding-block: 1rem;
+        line-height: 1.4;
+        color: var(--grey-500);
+    }
+
+    .grid__content{
+        padding: 4rem 1.8rem;
+    }
 }

@@ -12,6 +12,11 @@
 
 }
 
+img{
+    display: block;
+    max-width: 100%;
+}
+
 body{
     color: var(--black);
     font-family: "League Spartan", sans-serif;
@@ -35,4 +40,14 @@ body{
     outline: none;
     cursor: pointer;
     background-color: transparent;
+}
+
+.grid{
+    display: grid;
+    place-items: center;
+}
+
+.flex{
+    display: flex;
+    place-items: center;
 }
