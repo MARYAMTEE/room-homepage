@@ -13,7 +13,56 @@
     }
 }
 
+.room__hero-wrapper{
+    position: relative;
+    overflow: hidden;
+}
+
 .room__hero-desktop{
     object-fit: cover;
     width: 100%;
+}
+
+.room__slider-nav,
+.room__slider{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.room__slider{
+    left: 0;
+}
+
+// slider navigation
+.room__slider-button{
+    background-color: var(--black);
+    border: none;
+    outline: none;
+    width: 3rem;
+    height: 3rem;
+    gap: 0;
+}
+
+// mobile hero navigation
+.mobile__nav{
+    display: flex;
+
+    @include b.breakpoint("medium") {
+        display: none;
+    }
+}
+
+// desktop hero navigation
+.desktop__nav{
+    display: none;
+
+    @include b.breakpoint("medium") {
+        display: flex;
+    }
+}
+
+.room__hero-content{
+    position: relative;
+    overflow: hidden;
 }
