@@ -52,14 +52,11 @@
     padding: 4rem 1.8rem;
 
     @include b.breakpoint("medium"){
-        padding: 1rem;
-        max-width: 24rem;
-        width: 100%;
-        
+        padding: 1.5rem 2rem;
     }
 
     @include b.breakpoint("large"){
-        padding: 4rem 3rem;
+        padding: 4rem 3rem 0;
     }
 
     .desktop__nav{
@@ -78,8 +75,8 @@
             }
 
             @include b.breakpoint("large"){
-                width: 4rem;
-                height: 4rem;
+                width: 5.5rem;
+                height: 5rem;
             }
         }
     }
@@ -87,10 +84,6 @@
     .room__hero-title{
         font-size: 2.2rem;
         font-weight: 700;
-
-        @include b.breakpoint("medium"){
-            font-size: 2rem;
-        }
 
         @include b.breakpoint("large"){
             font-size: 2.7rem;
@@ -106,7 +99,7 @@
 
         @include b.breakpoint("medium"){
             padding-block: 0.5rem;
-            line-height: 1;
+            line-height: 1.3;
         }
 
         @include b.breakpoint("large"){
@@ -121,9 +114,6 @@
 
         @include b.breakpoint("medium"){
             margin-block-start: 0.5rem;
-        }
-        @include b.breakpoint("medium"){
-            margin-block-start: 0;
         }
 
         .hero__content-paragraph{
@@ -140,7 +130,11 @@
     grid-template-columns: 1fr;
 
     @include b.breakpoint("medium"){
-        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-columns: 1fr 1.5fr 1fr;
+    }
+
+    @include b.breakpoint("large"){
+        grid-template-columns: 1.3fr 2fr 1.2fr;
     }
 
     .grid__title{
@@ -156,9 +150,12 @@
         color: var(--grey-500);
 
         @include b.breakpoint("medium"){
-            line-height: 1.1;
-            font-size: 0.8rem;
-            padding-block: 0.5rem 0;
+            padding-block: 1rem;
+        }
+
+        @include b.breakpoint("large"){
+            padding-block: 1rem;
+            line-height: 1.4;
         }
     }
 
@@ -166,7 +163,20 @@
         padding: 4rem 1.8rem;
 
         @include b.breakpoint("medium"){
-            padding: 1rem;
+            padding: 1.5rem 2rem;
         }
+
+        @include b.breakpoint("large"){
+            padding: 4rem 3rem 0;
+        }
+    }
+}
+
+.grid__img{
+    object-fit: cover;
+    width: 100%;
+
+    @include b.breakpoint("medium"){
+        height: 16rem;
     }
 }
