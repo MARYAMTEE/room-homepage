@@ -51,6 +51,17 @@
     position: relative;
     padding: 4rem 1.8rem;
 
+    @include b.breakpoint("medium"){
+        padding: 1rem;
+        max-width: 24rem;
+        width: 100%;
+        
+    }
+
+    @include b.breakpoint("large"){
+        padding: 4rem 3rem;
+    }
+
     .desktop__nav{
         display: none;
 
@@ -60,14 +71,31 @@
         }
 
         .room__slider-button{
-            width: 4rem;
-            height: 4rem;
+
+            @include b.breakpoint("medium"){
+                width: 2rem;
+                height: 2rem;
+            }
+
+            @include b.breakpoint("large"){
+                width: 4rem;
+                height: 4rem;
+            }
         }
     }
     
     .room__hero-title{
         font-size: 2.2rem;
         font-weight: 700;
+
+        @include b.breakpoint("medium"){
+            font-size: 2rem;
+        }
+
+        @include b.breakpoint("large"){
+            font-size: 2.7rem;
+            line-height: 1;
+        }
     }
 
     .room__hero-description{
@@ -75,11 +103,28 @@
         padding-block: 1rem;
         line-height: 1.4;
         color: var(--grey-500);
+
+        @include b.breakpoint("medium"){
+            padding-block: 0.5rem;
+            line-height: 1;
+        }
+
+        @include b.breakpoint("large"){
+            padding-block: 1.4rem;
+            line-height: 1.4;
+        }
     }
 
     .hero__content-btn{
         gap: 2rem;
         margin-block-start: 1.5rem;
+
+        @include b.breakpoint("medium"){
+            margin-block-start: 0.5rem;
+        }
+        @include b.breakpoint("medium"){
+            margin-block-start: 0;
+        }
 
         .hero__content-paragraph{
             font-weight: 500;
@@ -95,7 +140,7 @@
     grid-template-columns: 1fr;
 
     @include b.breakpoint("medium"){
-        grid-template-columns: 1fr 1.3fr 1fr;
+        grid-template-columns: 1fr 2fr 1fr;
     }
 
     .grid__title{
@@ -109,9 +154,19 @@
         padding-block: 1rem;
         line-height: 1.4;
         color: var(--grey-500);
+
+        @include b.breakpoint("medium"){
+            line-height: 1.1;
+            font-size: 0.8rem;
+            padding-block: 0.5rem 0;
+        }
     }
 
     .grid__content{
         padding: 4rem 1.8rem;
+
+        @include b.breakpoint("medium"){
+            padding: 1rem;
+        }
     }
 }

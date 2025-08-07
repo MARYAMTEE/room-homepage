@@ -20,6 +20,7 @@ img{
 body{
     color: var(--black);
     font-family: "League Spartan", sans-serif;
+    background-color: var(--white);
 }
 
 .room__overlay{
@@ -29,6 +30,7 @@ body{
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.563);
+    z-index: 5;
 }
 
 .hidden{
