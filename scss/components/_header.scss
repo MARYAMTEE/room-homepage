@@ -71,7 +71,7 @@
         transform: translateY(0);
 
         @include b.breakpoint("medium") {
-            transition: none;
+            transform: translateY(100);
         }
     }
 
@@ -109,7 +109,7 @@
                 left: 50%;
                 bottom: 0;
                 width: 0%;
-                height: 2px;
+                height: 0.125rem;
                 background-color: var(--white);
                 transition: width 0.3s ease-in-out;
                 transform: translateX(-50%);

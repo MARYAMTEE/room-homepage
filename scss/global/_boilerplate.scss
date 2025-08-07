@@ -53,3 +53,10 @@ body{
     display: flex;
     place-items: center;
 }
+
+@media (prefers-reduced-motion: reduce){
+    .nav__menu,
+    .nav__link{
+        transition: none;
+    }
+}
