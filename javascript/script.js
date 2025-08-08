@@ -33,39 +33,52 @@ const desktopNext = document.querySelector(".desktop__nav .room__slider-button--
 const heroTitle = document.querySelector(".room__hero-title");
 const heroDescription = document.querySelector(".room__hero-description");
 
-let currentMobileIndex = 0;
-let currentDesktopIndex = 0;
+let currentIndex = 0;
 
 function updateHero(index){
-    if (mobileImages) mobileImages.srcset = mobileImage[index];
-    if (desktopImages) desktopImages.src = desktopImage[index];
-    if (heroTitle) heroTitle.textContent = heroTitles[index];
-    if (heroDescription) heroDescription.textContent = heroDescriptions[index];
+    mobileImages.classList.add("fade");
+    desktopImages.classList.add("fade");
+    heroTitle.classList.add("fade");
+    heroDescription.classList.add("fade");
+
+    setTimeout(() => {
+        if (mobileImages) mobileImages.srcset = mobileImage[index];
+        if (desktopImages) desktopImages.src = desktopImage[index];
+        if (heroTitle) heroTitle.textContent = heroTitles[index];
+        if (heroDescription) heroDescription.textContent = heroDescriptions[index];
+
+    mobileImages.classList.remove("fade");
+    desktopImages.classList.remove("fade");
+    heroTitle.classList.remove("fade");
+    heroDescription.classList.remove("fade");
+    }, 200)
 };
 
 // Previous mobile button
 mobilePrev.addEventListener("click", () => {
-    currentMobileIndex = (currentMobileIndex - 1 + mobileImage.length) % mobileImage.length;
-    updateHero(currentMobileIndex);
+    currentIndex = (currentIndex - 1 + mobileImage.length) % mobileImage.length;
+    updateHero(currentIndex);
 });
 
 // Next mobile button
 mobileNext.addEventListener("click", () => {
-    currentMobileIndex = (currentMobileIndex + 1) % mobileImage.length;
-    updateHero(currentMobileIndex);
+    currentIndex = (currentIndex + 1) % mobileImage.length;
+    updateHero(currentIndex);
 });
 
 // Previous desktop button
 desktopPrev.addEventListener("click", () => {
-    currentDesktopIndex = (currentDesktopIndex - 1 + desktopImage.length) % desktopImage.length;
-    updateHero(currentDesktopIndex);
+    currentIndex = (currentIndex - 1 + desktopImage.length) % desktopImage.length;
+    updateHero(currentIndex);
 });
 
 // Next desktop button
 desktopNext.addEventListener("click", () => {
-    currentDesktopIndex = (currentDesktopIndex + 1) % desktopImage.length;
-    updateHero(currentDesktopIndex);
+    currentIndex = (currentIndex + 1) % desktopImage.length;
+    updateHero(currentIndex);
 });
+
+updateHero(currentIndex)
 
 // Navigation section
 const openMenu = document.querySelector(".room__hamburger-button");
