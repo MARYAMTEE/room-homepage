@@ -51,7 +51,7 @@ function updateHero(index){
     desktopImages.classList.remove("fade");
     heroTitle.classList.remove("fade");
     heroDescription.classList.remove("fade");
-    }, 200)
+    }, 300)
 };
 
 // Previous mobile button

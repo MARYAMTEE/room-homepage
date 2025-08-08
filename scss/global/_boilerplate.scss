@@ -56,7 +56,10 @@ body{
 
 @media (prefers-reduced-motion: reduce){
     .nav__menu,
-    .nav__link{
+    .nav__link,
+    .room__hero-desktop,
+    .room__hero-title,
+    .room__hero-description{
         transition: none;
     }
 }
